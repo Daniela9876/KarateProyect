@@ -1,0 +1,36 @@
+13:16:08.443 request:
+1 > POST https://reqres.in/api/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 76
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: reqres.in
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_202)
+{"name":"morpheus","job":"leader","id":"#number","createdAt":"#(createdAt)"}
+
+13:16:11.288 response time in milliseconds: 2845,33
+1 < 201
+1 < Access-Control-Allow-Origin: *
+1 < CF-Cache-Status: DYNAMIC
+1 < CF-RAY: 73cca3985b059ae5-MIA
+1 < Connection: keep-alive
+1 < Content-Length: 88
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Thu, 18 Aug 2022 18:16:10 GMT
+1 < Etag: W/"58-5/iQ9z4DICajM5jbAfrsAnzNdck"
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6AlPodjVlnvSulntzkYNc3CcuPWCg7LnPGYUAhyiO7x6DT9pxfGeXRrts0Voek7ZX9WTRlkTl51QGIHTh%2FSB%2B92F4aIcTWImyqP2Ns1z36Os%2BdNAiZMWh2LE3g%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < Via: 1.1 vegur
+1 < X-Powered-By: Express
+{"name":"morpheus","job":"leader","id":"#number","createdAt":"2022-08-18T18:16:10.493Z"}
+
+://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+
+iated!"}}
+
+.112 assertion failed: assert evaluated to false: response.data.id == idGet
+
+et
+ar":"https:\/\/reqres.in\/img\/faces\/2-image.jpg","first_name":"Janet","email":"janet.weaver@reqres.in"}, expected: {idGet=#number, email=#string, first_name=#string, last_name=#string, avatar=#string}, reason: all key-values did not match, expected has un-matched keys: [idGet]
