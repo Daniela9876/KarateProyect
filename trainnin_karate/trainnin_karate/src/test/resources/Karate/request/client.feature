@@ -22,7 +22,19 @@
          And assert response.data.avatar == avatar
          And assert response.support.url == urlSupport
 
+         Scenario Outline: Users a no exist in data
 
+           Given path 'users', <idUser>
+           When method get
+           Then status 404
+
+           Examples:
+             | idUser |
+             | 1996   |
+             | ##.%&  |
+             | miguel |
+
+S
 
 
 
