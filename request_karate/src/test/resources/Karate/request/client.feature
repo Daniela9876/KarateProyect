@@ -24,15 +24,16 @@
 
          Scenario Outline: Users a no exist in data
 
-           Given path 'users', <idUser>
+           Given path 'users', <idClient>
            When method get
            Then status 404
 
            Examples:
-             | idUser |
-             | 1996   |
-             | ##.%&  |
-             | miguel |
+             | idClient |
+             | 1998   |
+             | "[¨*[" |
+             | "miguel" |
+
 
 
 
