@@ -1,38 +1,41 @@
+Feature:  Service client Get
+  As QA Automation
+  I want to consult a client
+  To validate the status code and response
 
-   Feature:  Service client Get
-     As QA Automation
-     I want to consult a client
-     To validate the status code and response
+  Background: consume service
+    * url url
 
-     Background: consume service
-       * url url
+  Scenario: Check the service GET method
 
-       Scenario: Check the service GET method
+    * def responsesGet = read('classpath:Karate/request/responsesGet.json')
+    Given path 'users','2'
+    When method get
+    Then status 200
+    And match response == responsesGet
+    And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!"
+    And assert response.data.email == email
+    And assert response.data.id == idClient
+    And assert response.data.first_name == firstname
+    And assert response.data.last_name == lastname
+    And assert response.data.avatar == avatar
+    And assert response.support.url == urlSupport
 
-         * def responsesGet = read('classpath:Karate/request/responsesGet.json')
-         Given path 'users','2'
-         When method get
-         Then status 200
-         And match response == responsesGet
-         And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!"
-         And assert response.data.email == email
-         And assert response.data.id == idClient
-         And assert response.data.first_name == firstname
-         And assert response.data.last_name == lastname
-         And assert response.data.avatar == avatar
-         And assert response.support.url == urlSupport
+  Scenario Outline: Users a no exist in data
 
-         Scenario Outline: Users a no exist in data
+    Given path 'users', <idClient>
+    When method get
+    Then status 404
+    And match response == <expect>
 
-           Given path 'users', <idClient>
-           When method get
-           Then status 404
-
-           Examples:
-             | idClient |
-             | 1998   |
-             | "[¨*[" |
-             | "miguel" |
+    Examples:
+      | idClient     | expect |
+      | 1998         | {}     |
+      | "[¨*["       | {}     |
+      | "miguel"     | {}     |
+      | "#null"      | {}     |
+      | 123654789652 | {}     |
+      | "2*"         | {}     |
 
 
 
