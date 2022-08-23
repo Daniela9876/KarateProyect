@@ -1,4 +1,4 @@
-  @POST
+
    Feature:  Service client Get
      As QA Automation
      I want to consult a client
@@ -16,3 +16,26 @@
          And match response == responsesGet
          And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!"
          And assert response.data.email == email
+         And assert response.data.id == idClient
+         And assert response.data.first_name == firstname
+         And assert response.data.last_name == lastname
+         And assert response.data.avatar == avatar
+         And assert response.support.url == urlSupport
+
+         Scenario Outline: Users a no exist in data
+
+           Given path 'users', <idClient>
+           When method get
+           Then status 404
+
+           Examples:
+             | idClient |
+             | 1998   |
+             | "[¨*[" |
+             | "miguel" |
+
+
+
+
+
+
