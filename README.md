@@ -1,7 +1,8 @@
 Actor: Daniela gutierrez
-#testing Automation request Appi
+# testing Automation request Appi
 
-##Descripción
+## Descripción
+***
 _Reqres simulates real application scenarios.
 _Where we can test different functionals like
 _register, login, update, delete between
@@ -13,10 +14,10 @@ _use of SOLID principles, dependency manager
 _MAVEN (version: 10.0), karate (version: 0.9.6), fremwork
 _cucumber (version: 4.6.0)
 ***
-##Reportes
+## Reportes
 _cucumber-reporting. 
 ***
-##prerequisitos
+## prerequisitos
 -_ID (intellij)
 -_Environment Variables Java
 -_Environment Variables Maven
