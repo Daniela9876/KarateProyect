@@ -11,12 +11,12 @@ being the login (POST, LOGIN - SUCCESSFUL)
 and the (GEt, SINGLE USER) endpoins tested by doing
 use of SOLID principles, dependency manager
 MAVEN (version: 10.0), karate (version: 0.9.6), fremwork
-cucumber (version: 4.6.0)
+cucumber (version: 4.6.0) and design pattern POM.
 
-*Reportes
+*Reports
 cucumber-reporting. 
 
-*prerequisitos
+*prerequisites
 ID (intellij)
 Environment Variables Java
 Environment Variables Maven
