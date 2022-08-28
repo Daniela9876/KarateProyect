@@ -31,8 +31,8 @@
            Examples:
              | idUser |
              | 1996   |
-             | ##.%&  |
-             | miguel |
+             | "¿?%&"  |
+             | "daniela" |
 
 
 
