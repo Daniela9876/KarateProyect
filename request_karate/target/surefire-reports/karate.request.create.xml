@@ -1,0 +1,13 @@
+<testsuite failures="0" name="karate/request/create.feature" skipped="0" tests="1" time="0.529675">
+  <testcase classname="karate.request.create" name="check the service POST method" time="0.529675">
+    <system-out>* url url ................................................................. passed
+* def requestCreate = {"name": '#(name)',"job": "#(job)","id": "#(id)","createdAt": "#(createdAt)"} . passed
+Given path 'users' ........................................................ passed
+And request requestCreate ................................................. passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And assert response.name == "morpheus" .................................... passed
+And assert response.job == "leader" ....................................... passed
+And assert response.id == id .............................................. passed</system-out>
+  </testcase>
+</testsuite>

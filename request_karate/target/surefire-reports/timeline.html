@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-1"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"client[1:10]","start":2056,"end":4394,"title":"client[1:10] 19:00:02.056-19:00:04.394 Check the service GET method"},{"id":2,"group":1,"content":"client[2.1:33]","start":4417,"end":4929,"title":"client[2.1:33] 19:00:04.417-19:00:04.929 Users a no exist in data"},{"id":3,"group":1,"content":"client[2.2:34]","start":4944,"end":5451,"title":"client[2.2:34] 19:00:04.944-19:00:05.451 Users a no exist in data"},{"id":4,"group":1,"content":"client[2.3:35]","start":5467,"end":5891,"title":"client[2.3:35] 19:00:05.467-19:00:05.891 Users a no exist in data"},{"id":5,"group":1,"content":"create[1:10]","start":6053,"end":6584,"title":"create[1:10] 19:00:06.053-19:00:06.584 check the service POST method"},{"id":6,"group":1,"content":"LogUser[1:9]","start":6624,"end":7135,"title":"LogUser[1:9] 19:00:06.624-19:00:07.135 check the service POST method"},{"id":7,"group":1,"content":"LogUser[2.1:38]","start":7159,"end":7674,"title":"LogUser[2.1:38] 19:00:07.159-19:00:07.674 start session with invalid email values"},{"id":8,"group":1,"content":"LogUser[2.2:39]","start":7685,"end":8178,"title":"LogUser[2.2:39] 19:00:07.685-19:00:08.178 start session with invalid email values"},{"id":9,"group":1,"content":"LogUser[2.3:40]","start":8190,"end":8698,"title":"LogUser[2.3:40] 19:00:08.190-19:00:08.698 start session with invalid email values"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

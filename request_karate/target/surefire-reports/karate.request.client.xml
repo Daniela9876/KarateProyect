@@ -1,0 +1,86 @@
+<testsuite failures="0" name="karate/request/client.feature" skipped="0" tests="4" time="3.757043">
+  <testcase classname="karate.request.client" name="Check the service GET method" time="2.317378">
+    <system-out>* url url ................................................................. passed
+* def responsesGet = read('classpath:Karate/request/responsesGet.json') ... passed
+Given path 'users','2' .................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == responsesGet ........................................ passed
+And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!" . passed
+And assert response.data.email == email ................................... passed
+And assert response.data.id == idClient ................................... passed
+And assert response.data.first_name == firstname .......................... passed
+And assert response.data.last_name == lastname ............................ passed
+And assert response.data.avatar == avatar ................................. passed
+And assert response.support.url == urlSupport ............................. passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.client" name="Users a no exist in data" time="0.511284">
+    <system-out>* url url ................................................................. passed
+* def responsesGet = read('classpath:Karate/request/responsesGet.json') ... passed
+Given path 'users','2' .................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == responsesGet ........................................ passed
+And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!" . passed
+And assert response.data.email == email ................................... passed
+And assert response.data.id == idClient ................................... passed
+And assert response.data.first_name == firstname .......................... passed
+And assert response.data.last_name == lastname ............................ passed
+And assert response.data.avatar == avatar ................................. passed
+And assert response.support.url == urlSupport ............................. passed
+* url url ................................................................. passed
+Given path 'users', 1996 .................................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.client" name="Users a no exist in data" time="0.505684">
+    <system-out>* url url ................................................................. passed
+* def responsesGet = read('classpath:Karate/request/responsesGet.json') ... passed
+Given path 'users','2' .................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == responsesGet ........................................ passed
+And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!" . passed
+And assert response.data.email == email ................................... passed
+And assert response.data.id == idClient ................................... passed
+And assert response.data.first_name == firstname .......................... passed
+And assert response.data.last_name == lastname ............................ passed
+And assert response.data.avatar == avatar ................................. passed
+And assert response.support.url == urlSupport ............................. passed
+* url url ................................................................. passed
+Given path 'users', 1996 .................................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* url url ................................................................. passed
+Given path 'users', "¿?%&amp;" ................................................ passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.client" name="Users a no exist in data" time="0.422697">
+    <system-out>* url url ................................................................. passed
+* def responsesGet = read('classpath:Karate/request/responsesGet.json') ... passed
+Given path 'users','2' .................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == responsesGet ........................................ passed
+And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!" . passed
+And assert response.data.email == email ................................... passed
+And assert response.data.id == idClient ................................... passed
+And assert response.data.first_name == firstname .......................... passed
+And assert response.data.last_name == lastname ............................ passed
+And assert response.data.avatar == avatar ................................. passed
+And assert response.support.url == urlSupport ............................. passed
+* url url ................................................................. passed
+Given path 'users', 1996 .................................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* url url ................................................................. passed
+Given path 'users', "¿?%&amp;" ................................................ passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* url url ................................................................. passed
+Given path 'users', "daniela" ............................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

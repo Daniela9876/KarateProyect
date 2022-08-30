@@ -1,0 +1,82 @@
+<testsuite failures="0" name="karate/request/LogUser.feature" skipped="0" tests="4" time="2.013397">
+  <testcase classname="karate.request.LogUser" name="check the service POST method" time="0.500734">
+    <system-out>* url url ................................................................. passed
+* def requestLogin = {"email": "eve.holt@reqres.in","password": "cityslicka"} . passed
+Given path 'login' ........................................................ passed
+And request requestLogin .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.LogUser" name="start session with invalid email values" time="0.513718">
+    <system-out>* url url ................................................................. passed
+* def requestLogin = {"email": "eve.holt@reqres.in","password": "cityslicka"} . passed
+Given path 'login' ........................................................ passed
+And request requestLogin .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* def email = '657826' .................................................... passed
+* def AddPetErrorLOG = read('classpath:Karate/request/responsesLoginERROR.json') . passed
+Given path 'login' ........................................................ passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+And match response == AddPetErrorLOG ...................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.LogUser" name="start session with invalid email values" time="0.492397">
+    <system-out>* url url ................................................................. passed
+* def requestLogin = {"email": "eve.holt@reqres.in","password": "cityslicka"} . passed
+Given path 'login' ........................................................ passed
+And request requestLogin .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* def email = '657826' .................................................... passed
+* def AddPetErrorLOG = read('classpath:Karate/request/responsesLoginERROR.json') . passed
+Given path 'login' ........................................................ passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+And match response == AddPetErrorLOG ...................................... passed
+* url url ................................................................. passed
+* def email = '"****"' .................................................... passed
+* def AddPetErrorLOG = read('classpath:Karate/request/responsesLoginERROR.json') . passed
+Given path 'login' ........................................................ passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+And match response == AddPetErrorLOG ...................................... passed</system-out>
+  </testcase>
+  <testcase classname="karate.request.LogUser" name="start session with invalid email values" time="0.506548">
+    <system-out>* url url ................................................................. passed
+* def requestLogin = {"email": "eve.holt@reqres.in","password": "cityslicka"} . passed
+Given path 'login' ........................................................ passed
+And request requestLogin .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* url url ................................................................. passed
+* def email = '657826' .................................................... passed
+* def AddPetErrorLOG = read('classpath:Karate/request/responsesLoginERROR.json') . passed
+Given path 'login' ........................................................ passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+And match response == AddPetErrorLOG ...................................... passed
+* url url ................................................................. passed
+* def email = '"****"' .................................................... passed
+* def AddPetErrorLOG = read('classpath:Karate/request/responsesLoginERROR.json') . passed
+Given path 'login' ........................................................ passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+And match response == AddPetErrorLOG ...................................... passed
+* url url ................................................................. passed
+* def email = '"hole"' .................................................... passed
+* def AddPetErrorLOG = read('classpath:Karate/request/responsesLoginERROR.json') . passed
+Given path 'login' ........................................................ passed
+And request ............................................................... passed
+When method POST .......................................................... passed
+Then status 400 ........................................................... passed
+And match response == AddPetErrorLOG ...................................... passed</system-out>
+  </testcase>
+</testsuite>
